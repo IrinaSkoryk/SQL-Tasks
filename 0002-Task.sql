@@ -1,9 +1,8 @@
 -- #Easy #Exception #NOT_IN
 -- Show all the contact_name, address, city of all customers which are not from 'Germany', 'Mexico', 'Spain'
 
-CREATE TABLE castomers (
-  castomer_id INT PRIMARY KEY
-  , customer_id TEXT
+CREATE TABLE customers (
+  customer_id TEXT PRIMARY KEY
   , company_name TEXT
   , contact_name TEXT
   , contact_title TEXT
