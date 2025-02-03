@@ -12,7 +12,8 @@ CREATE TABLE customers (
   , postal_code TEXT
   , country TEXT
   , phone TEXT
-  , fax TEXT)
+  , fax TEXT  
+  );
 
 SELECT 
   contact_name
