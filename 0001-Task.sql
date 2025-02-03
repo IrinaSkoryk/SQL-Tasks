@@ -2,9 +2,11 @@
 -- Show the category_name and description from the categories table sorted by category_name.
 
 CREATE TABLE categories (
-  category_id INT Primary key
+  category_id INT PRIMARY KEY
   , category_name TEXT
-  , description TEXT)
+  , description TEXT  
+  );
+
 SELECT 
   category_name
   , description
