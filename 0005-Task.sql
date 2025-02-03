@@ -16,7 +16,8 @@ CREATE TABLE orders (
   , ship_region TEXT
   , ship_postal_code TEXT
   , ship_country TEXT
-  )
+  );
+
 SELECT order_id
 FROM orders
 WHERE MOD(order_id,2) = 0;
