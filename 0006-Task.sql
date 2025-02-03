@@ -1,4 +1,4 @@
--- #Easy #LIKE
+-- #Easy #LIKE #text_operations #pattern_matching #filtering #wild_cards
 -- Show the city, company_name, contact_name of all customers from cities which contains the letter 'L' in the city name, sorted by contact_name
 
 CREATE TABLE customers (
@@ -13,7 +13,8 @@ CREATE TABLE customers (
   , country TEXT
   , phone TEXT
   , fax TEXT
-)
+);
+
 SELECT   
   city
   , company_name
