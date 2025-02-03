@@ -13,7 +13,7 @@ CREATE TABLE customers (
   , country TEXT
   , phone TEXT
   , fax TEXT
-)
+);
 
 SELECT  
   company_name
