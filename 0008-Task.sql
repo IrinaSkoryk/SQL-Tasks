@@ -17,7 +17,7 @@ CREATE TABLE employees (
   , home_phone TEXT  
   , extension 	TEXT  
   , FOREIGN KEY (reports_to) REFERENCES employees (employee_id)
-)
+);
 
 SELECT  
   first_name
