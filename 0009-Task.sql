@@ -1,4 +1,4 @@
--- #Easy #AVG #SUM #Total #ROUND
+-- #Easy #AVG #SUM #Total #ROUND #aggregation #aggregate_function #calculations
 -- Show the average unit price rounded to 2 decimal places, the total units in stock, total discontinued products from the products table.
 
 CREATE TABLE produsts (
