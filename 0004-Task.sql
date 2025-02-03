@@ -16,9 +16,9 @@ CREATE TABLE orders (
   , ship_region TEXT
   , ship_postal_code TEXT
   , ship_country TEXT
-  )
+  );
 
-Select 
+SELECT 
   employee_id
   , order_id
   , customer_id
