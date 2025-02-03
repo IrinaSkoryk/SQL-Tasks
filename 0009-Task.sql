@@ -12,7 +12,7 @@ CREATE TABLE produsts (
   , units_on_order INT  
   , reorder_level INT  
   , discontinued INT
-)
+);
 
 SELECT  
   ROUND(AVG(unit_price),2) AS average_price  
