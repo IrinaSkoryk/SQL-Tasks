@@ -2,11 +2,14 @@
 -- Show the total number of admissions
 
 CREATE TABLE admissions (  
-  FOREIGN KEY (patient_id) REFERENCES patients (patient_id)  
-  admission_date DATE  
-  discharge_date 	DATE  
-  diagnosis 	TEXT
-  FOREIGN KEY (attending_doctor_id) REFERENCES doctors (doctor_id)
+  admission_id PRIMARY KEY  
+  , patient_id INT
+  , admission_date DATE  
+  , discharge_date DATE  
+  , diagnosis TEXT  
+  , attending_doctor_id INT  
+  , FOREIGN KEY (patient_id) REFERENCES patients (patient_id)  
+  , FOREIGN KEY (attending_doctor_id) REFERENCES doctors (doctor_id)  
 );
 
 SELECT COUNT(*) AS total_adnissions
