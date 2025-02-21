@@ -3,12 +3,12 @@
 
 CREATE TABLE orders (
   order_id INT PRIMARY KEY
-  , FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
-  , FOREIGN KEY (employee_id) REFERENCES employees (empoyee_id)
+  , customer_id INT  
+  , employee_id INT
   , order_date DATE
   , required_date DATE
   , shipped_date DATE
-  , FOREIGN KEY (ship_via) REFERENCES shippers (shipper_id)
+  , ship_via INT  
   , freight DECIMAL
   , ship_name TEXT
   , ship_address TEXT
@@ -16,6 +16,9 @@ CREATE TABLE orders (
   , ship_region TEXT
   , ship_postal_code TEXT
   , ship_country TEXT
+  , FOREIGN KEY (ship_via) REFERENCES shippers (shipper_id)  
+  , FOREIGN KEY (customer_id) REFERENCES customers (customer_id)  
+  , FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
 );
 
 SELECT  
