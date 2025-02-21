@@ -4,14 +4,16 @@
 CREATE TABLE produsts (
   product_id INT PRIMARY KEY  
   , product_name TEXT  
-  , FOREIGN KEY (supplier_id) REFERENCES suppliers (supplier_id)  
-  , FOREIGN KEY (category_id) REFERENCES categories (category_id)   
+  , supplier_id INT
+  , category_id INT 
   , quantity_per_unit TEXT  
   , unit_price DECIMAL
   , units_in_stock INT  
   , units_on_order INT  
   , reorder_level INT  
   , discontinued INT
+  , FOREIGN KEY (supplier_id) REFERENCES suppliers (supplier_id)  
+  , FOREIGN KEY (category_id) REFERENCES categories (category_id)  
 );
 
 SELECT  
