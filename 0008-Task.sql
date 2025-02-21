@@ -15,7 +15,8 @@ CREATE TABLE employees (
   , postal_code TEXT  
   , country TEXT  
   , home_phone TEXT  
-  , extension 	TEXT  
+  , extension TEXT 
+  , reports_to INT
   , FOREIGN KEY (reports_to) REFERENCES employees (employee_id)
 );
 
