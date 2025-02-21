@@ -3,12 +3,12 @@
 
 CREATE TABLE orders (
   order_id INT PRIMARY KEY
-  , FOREIGN KEY (customer_id TEXT) REFERENCES customers (customer_id)
-  , FOREIGN KEY (employee_id INT) REFERENCES employees (empoyee_id)
+  , customer_id INT  
+  , employee_id INT
   , order_date DATE
   , required_date DATE
   , shipped_date DATE
-  , FOREIGN KEY (ship_via INT) REFERENCES shippers (shipper_id)
+  , ship_via INT  
   , freight DECIMAL
   , ship_name TEXT
   , ship_address TEXT
@@ -16,26 +16,33 @@ CREATE TABLE orders (
   , ship_region TEXT
   , ship_postal_code TEXT
   , ship_country TEXT
+  , FOREIGN KEY (ship_via) REFERENCES shippers (shipper_id)  
+  , FOREIGN KEY (customer_id) REFERENCES customers (customer_id)  
+  , FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
 );
 
 CREATE TABLE produsts (
   product_id INT PRIMARY KEY  
   , product_name TEXT  
-  , FOREIGN KEY (supplier_id) REFERENCES suppliers (supplier_id)  
-  , FOREIGN KEY (category_id) REFERENCES categories (category_id)   
+  , supplier_id INT
+  , category_id INT 
   , quantity_per_unit TEXT  
   , unit_price DECIMAL
   , units_in_stock INT  
   , units_on_order INT  
   , reorder_level INT  
   , discontinued INT
+  , FOREIGN KEY (supplier_id) REFERENCES suppliers (supplier_id)  
+  , FOREIGN KEY (category_id) REFERENCES categories (category_id)  
 );
 
 CREATE TABLE order_details (  
-  FOREIGN KEY (order_id) REFERENCES orders (order_id)
-  , FOREIGN KEY (product_id) REFERENCES products (product_id)
+  order_id INT
+  , product_id INT
   , quantity INT  
   , discount DECIMAL
+  , FOREIGN KEY (order_id) REFERENCES orders (order_id)
+  , FOREIGN KEY (product_id) REFERENCES products (product_id)
 );
 
 SELECT  
