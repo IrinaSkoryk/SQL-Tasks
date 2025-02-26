@@ -12,6 +12,13 @@ CREATE TABLE admissions (
   , FOREIGN KEY (attending_doctor_id) REFERENCES doctors (doctor_id)  
 );
 
+CREATE TABLE doctors (  
+  doctor_id INT PRIMARY KEY  
+  , first_name TEXT  
+  , last_name TEXT  
+  , specialty TEXT
+);
+
 SELECT   
   d.first_name AS first_name  
   , d.last_name AS last_name  
