@@ -27,8 +27,8 @@ CREATE TABLE patients (
 );
 
 CREATE TABLE doctors (  
-  doctor_id INT PRIMARY KEY
-	, first_name TEXT
+  doctor_id INT PRIMARY KEY  
+  , first_name TEXT
   , last_name TEXT  
   , specialty TEXT
 );
