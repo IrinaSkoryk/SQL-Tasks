@@ -3,7 +3,8 @@
 This repository contains a solutions to different questions that I solved
 
 **Task sources:**  
-🔗 [SQL-Practice](https://www.sql-practice.com/)   ➡️   0001-Task — 0077-Task
+🔗 [SQL-Practice](https://www.sql-practice.com/)   ➡️   0001-Task — 0077-Task  
+🔗 [Leet Code](https://leetcode.com/studyplan/top-sql-50/)   ➡️   0078-Task — ∞
 
 🔍 **Tags:**  
 [#aggregate_function](https://github.com/search?q=repo%3AIrinaSkoryk%2FSQL-Tasks%20%23aggregate_function&type=code)  
